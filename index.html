@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gay Club | Работа</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at top, #40105b, #09070d 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px 24px;
+  border: 1px solid #a34bdb;
+  border-radius: 22px;
+  background: #15101d;
+  text-align: center;
+  box-shadow: 0 0 35px #8e28c544;
+}
+
+.logo {
+  font-size: 48px;
+}
+
+h1 {
+  color: #dba4ff;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+p {
+  color: #d0c3da;
+  line-height: 1.6;
+}
+
+.tag {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #8541ad;
+  border-radius: 20px;
+  color: #e4baff;
+  font-size: 13px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 18px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #7928b5, #c052f5);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(.98);
+}
+
+#form {
+  display: none;
+  margin-top: 24px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  color: #e2c6f5;
+}
+
+input, select {
+  width: 100%;
+  margin-top: 8px;
+  padding: 13px;
+  border: 1px solid #69417e;
+  border-radius: 9px;
+  background: #21182b;
+  color: white;
+  font-size: 15px;
+}
+
+.note {
+  font-size: 12px;
+  color: #9e8ba9;
+  margin-top: 20px;
+}
+
+#message {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background: #2b1838;
+  border-radius: 12px;
+  color: #e7c5ff;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+<main class="card">
+
+  <div class="logo">🌈</div>
+
+  <span class="tag">CAREERS · NIGHTLIFE</span>
+
+  <h1>GAY CLUB</h1>
+
+  <p>
+    Добро пожаловать в наш клуб.<br>
+    Открой для себя мир ночной жизни.
+  </p>
+
+  <p>
+    <strong>Вакансия:</strong><br>
+    Танцор / артист клуба
+  </p>
+
+  <button id="openForm">
+    Регистрация
+  </button>
+
+  <form id="form">
+    <h2 style="color:#dba4ff;text-align:center">
+      Анкета кандидата
+    </h2>
+
+    <label for="nickname">Имя или псевдоним</label>
+    <input id="nickname" type="text"
+      placeholder="Например, Alex" required>
+
+    <label for="role">Желаемая должность</label>
+    <select id="role">
+      <option>Танцор / артист</option>
+      <option>Ведущий вечеринок</option>
+      <option>Сотрудник клуба</option>
+    </select>
+
+    <button type="submit">
+      Отправить анкету
+    </button>
+
+    <p class="note">
+      Демонстрационная форма. Данные не отправляются
+      и не сохраняются на сервере.
+    </p>
+  </form>
+
+  <div id="message">
+    💜 Анкета заполнена!<br>
+    Это демонстрация сайта.
+  </div>
+
+  <p class="note">
+    GAY CLUB · OFFICIAL WEBSITE
+  </p>
+
+</main>
+
+<script>
+const openForm = document.getElementById("openForm");
+const form = document.getElementById("form");
+const message = document.getElementById("message");
+
+openForm.addEventListener("click", () => {
+  form.style.display = "block";
+  openForm.style.display = "none";
+});
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  form.style.display = "none";
+  message.style.display = "block";
+});
+</script>
+
+</body>
+</html>
